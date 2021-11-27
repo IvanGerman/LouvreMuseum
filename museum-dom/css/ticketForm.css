@@ -1,0 +1,663 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(3, 3, 3, 0.5);
+  display: none;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  position: fixed;
+}
+
+
+.ticketsForm-container {
+  z-index: 20;
+  transform: translateX(-150%);
+  transition: transform 1s ease;
+  margin-left: -720px;
+  padding: 91px 235px;
+  width: 1440px;
+  height: 845px;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  margin-top: -425px;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+}
+
+.ticketsForm-container *, .ticketsForm-container {
+  box-sizing: border-box;
+  outline: 0;
+  font-weight: 400;
+}
+
+.ticketsForm-container .overview-title {
+  font-weight: 600;
+}
+
+.ticketsForm-container select option {
+  color: #030303;
+  font-weight: 300;
+  font-size: 18px;
+  padding: 12px 0;
+}
+
+.ticketsForm-container select option:nth-child(3) {
+  background: #E7E7E7;
+}
+
+
+
+
+ .cross-sign {
+  top: 30px;
+  right: 30px;
+  background: none;
+  position: absolute;
+}
+
+.ticketsForm-left-div {
+  width: 400px;
+}
+
+.date-time-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-tickets-title {
+  font-size: 49px;
+  line-height: 55px;
+  text-transform: uppercase;
+  margin: -7px 0 15px 0;
+  font-family: "Forum", sans-serif;
+  color: #9D8665;
+}
+
+.tour-to-louvre-div {
+  font-size: 18px;
+  line-height: 21px;
+  margin: 0 0 50px 0;
+  color: #710707;
+  position: relative;
+}
+
+.tour-to-louvre-div::after {
+  content: '';
+  width: 100%;
+  height: 3px;
+  background-color: #710707;
+  left: 0;
+  bottom: -10px;
+  position: absolute;
+}
+
+.booking-form input {
+  border: 1px solid #000000;
+  margin-top: 20px;
+}
+
+.booking-form input::-webkit-input-placeholder {
+  color: #000000;
+}
+
+.booking-form input[type="date"] {
+  background: url('./../assets/svg/ticketForm-svg/Date-svg.svg') no-repeat 14px;
+  background-size: 15px 15px;
+}
+
+.booking-form input[type="time"] {
+  background: url('./../assets/svg/ticketForm-svg/Time-svg.svg') no-repeat 14px;
+  background-size: 15px 15px;
+}
+
+.booking-form input[type="text"] {
+  background-size: 15px 15px;
+  background: url('./../assets/svg/ticketForm-svg/Name-svg.svg') no-repeat 14px;
+}
+
+.booking-form input[type="email"] {
+  background: url(./../assets/svg/ticketForm-svg/Email-svg.svg) no-repeat 14px;
+  background-size: 15px 11px;
+}
+
+.booking-form input[type="tel"] {
+  background: url(./../assets/svg/ticketForm-svg/Phone-svg.svg) no-repeat 14px;
+  background-size: 15px 22px;
+}
+
+.booking-form input[type="date"], .booking-form input[type="time"] {
+  width: 190px;
+  height: 45px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 0 8px 0 45px;
+  display: block;
+}
+
+
+
+
+#input-date:focus, #time-date:focus, #input-date:valid, #time-date:valid {
+  font-size: 14px;
+  color: #000000;
+}
+
+.booking-form input[type="date"]::before, .booking-form input[type="time"]::before {
+  content: attr(placeholder);
+  color: #000000;
+  position: absolute;
+}
+
+.booking-form input[type="date"]:valid::before,
+.booking-form input[type="time"]:focus::before,
+.booking-form input[type="date"]:focus::before,
+.booking-form input[type="time"]:valid::before {
+  content: '';
+}
+
+/* calendar-picker-indicator start */
+.booking-form ::-webkit-calendar-picker-indicator {
+  background-size: 15px 15px;
+  background: url(./../assets/svg/ticketForm-svg/Arrow-up-svg.svg) no-repeat center;
+}
+
+.booking-form input[type="date"]:focus::-webkit-calendar-picker-indicator, .booking-form input[type="time"]:valid::-webkit-calendar-picker-indicator, .booking-form input[type="date"]:valid::-webkit-calendar-picker-indicator, .booking-form input[type="time"]:focus::-webkit-calendar-picker-indicator {
+  background: url(./../assets/svg/ticketForm-svg/Arrow-down-svg.svg) no-repeat center;
+  background-size: 15px 15px;
+  margin-right: 3px;
+}
+
+.booking-form input[type="time"]:focus::-webkit-calendar-picker-indicator, .booking-form input[type="time"]:valid::-webkit-calendar-picker-indicator {
+  margin-right: 3px;
+}
+/* calendar-picker-indicator end */
+
+.entry-ticket-div {
+  margin-top: 20px;
+  padding: 10px 15px 15px;
+  border: 1px solid #030303;
+}
+
+.booking-form select:focus {
+  background-position: center right 9px, center left 16px;
+  background-repeat: no-repeat, no-repeat;
+  background-image: url("./../assets/svg/ticketForm-svg/Arrow-down-svg.svg"), url("./../assets/svg/ticketForm-svg/Ticket-svg.svg");
+  
+}
+
+.entry-ticket-h4 {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  text-transform: capitalize;
+  color: #9D8665;
+  margin: -2px 0 24px 0;
+}
+
+.booking-form input[type="text"], .booking-form input[type="email"], .booking-form input[type="tel"] {
+  width: 400px;
+  height: 45px;
+  padding: 0 8px 0 45px;
+  font-size: 18px;
+}
+
+.booking-form select {
+  width: 400px;
+  height: 45px;
+  margin-top: 20px;
+  padding: 0 8px 0 45px;
+  font-size: 18px;
+  border: 1px solid #000000;
+  background-image: url("./../assets/svg/ticketForm-svg/Arrow-up-svg.svg"), url("./../assets/svg/ticketForm-svg/Ticket-svg.svg");
+  appearance: none;
+  background-position: center right 10px, center left 15px;
+  background-repeat: no-repeat, no-repeat;
+  position: relative;
+}
+
+.entry-ticket-h4::after {
+  width: 100%;
+  height: 2px;
+  left: 0;
+  bottom: -7px;
+  background-color: #710707;
+  content: '';
+  position: absolute;
+}
+
+.ticket-number-booking {
+  display: flex;
+  flex-direction: column;
+}
+
+.set-number-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.set-number-div:nth-child(1) {
+  margin: 0 0 20px 0;
+}
+
+.set-number-h5 {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.minus-plus-div {
+  width: 105px;
+  height: 25px;
+  margin-top: -2px;
+  border: 1px solid #030303;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.minus-plus-div input::-webkit-outer-spin-button, .minus-plus-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.minus-plus-div .minus {
+  left: 0;
+}
+
+.minus-plus-div .plus {
+  right: -3px;
+}
+
+.minus-plus-div-btn {
+  width: 35px;
+  height: 25px;
+  background-color: #030303;
+  color: #fff;
+  font-size: 18px;
+  position: absolute;
+}
+
+.set-number-input {
+  background: none;
+  color: #030303;
+  border: none;
+  font-weight: 200;
+  line-height: 26px;
+  font-size: 18px;
+  position: absolute;
+  left: 45px;
+}
+
+.ticketsForm-right-div {
+  width: 530px;
+  padding: 25px 30px;
+  border: 1px solid #030303;
+}
+
+.overview {
+  background: url('./../assets/img/LouvreSmall.jpg') no-repeat;
+  background-position: right top;
+}
+
+.tour-to-louvre-div2 {
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 26px;
+  margin: 5px 0 10px 0;
+  line-height: 26px;
+  color: #740C11;
+  opacity: 0.9;
+}
+
+.overview-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 37px;
+  color: #272727;
+}
+
+.selected {
+  padding-bottom: 20px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.selected-type {
+  background: url('./../assets/svg/ticketForm-svg/Checked-svg.svg') no-repeat;
+  background-position: left;
+  background-size: 15px 15px;
+  padding-left: 30px;
+}
+
+.selected>div {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.selected-date {
+  background: url('./../assets/svg/ticketForm-svg/Date-svg.svg') no-repeat;
+  background-position: left;
+  background-size: 15px 15px;
+  padding-left: 30px;
+}
+
+.selected-time {
+  background: url('./../assets/svg/ticketForm-svg/Time-svg.svg') no-repeat;
+  background-position: left;
+  background-size: 15px 15px;
+  padding: 6px 0 6px 30px;
+}
+
+.booking-summary {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  line-height: 26px;
+  color: #030303;
+  position: relative;
+}
+
+.booking-summary::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background-color: #710707;
+  height: 2px;
+  top: 67px;
+  left: 0;
+}
+
+.money-amount-senior span {
+  margin-right: 5px;
+}
+
+.booking-types span {
+  width: 32px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  display: inline-block;
+  text-align: center;
+  background: #000000;
+  border-radius: 5px;
+  line-height: 21px;
+  color: #A4A4A3;
+  font-size: 18px;
+}
+
+.booking-types-basic-h5 {
+  margin-bottom: 6px;
+}
+
+.booking-types-senior-h5 {
+  margin-bottom: 20px;
+}
+
+.money-amount-basic {
+  margin-bottom: 7px;
+  padding-left: 18px;
+}
+
+.booking-types-total-h5 {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.money-amount {
+  padding: 0;
+}
+
+.money-amount-basic span {
+  margin-right: 5px;
+}
+
+.money-amount-senior {
+  margin-bottom: 20px;
+  padding-left: 18px;
+}
+
+.money-amount-total,
+.ticketsForm-container .money-amount-total .total-span {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  font-family: sans-serif;
+}
+
+.money-amount-total span {
+  margin-right: 5px;
+}
+
+.credit-card-div {
+  margin: 10px 0 0 0;
+  position: relative;
+}
+
+/* credit-card-frontside-start */
+.credit-card-frontside {
+  width: 360px;
+  padding: 15px 20px;
+  font-size: 12px;
+  background-color: #BCBCBC;
+  line-height: 14px;
+  border-radius: 5px;
+  background-image: url("./../assets/svg/ticketForm-svg/Visa-svg.svg"), url("./../assets/svg/ticketForm-svg/Mastercard-svg.svg");
+  background-position: top 35px right 20px, top 65px right 20px;
+  background-repeat: no-repeat, no-repeat;
+  z-index: 20;
+  position: relative;
+}
+
+.credit-card-frontside input[type="tel"] {
+  width: 215px;
+  height: 35px;
+  margin: 5px 50px 0 0;
+  padding: 0 0 0 35px;
+  border: 1px solid #A4A4A3;
+}
+
+.credit-card-frontside input[type="number"] {
+  width: 100px;
+  height: 35px;
+  border: 1px solid #A4A4A3;
+  margin: 5px 12px 10px 0;
+  padding: 0 0 0 10px;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.credit-card-frontside input[type="number"]:nth-child(3) {
+  margin: 5px 50px 10px 0;
+}
+
+.credit-card-frontside input::-webkit-outer-spin-button, .credit-card-frontside input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.credit-card-frontside .exp-date-div {
+  display: inline-block;
+  position: relative;
+}
+
+.credit-card-frontside .exp-date-div .exp-date-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 28px;
+  height: 33px;
+  border-left: 1px solid #A4A4A3;
+  position: absolute;
+}
+
+.credit-card-frontside .exp-date-div .exp-date-buttons button {
+  width: 6px;
+  background: none;
+  line-height: 4px;
+  height: 4px;
+}
+
+.credit-card-frontside .exp-date-div .month-buttons-div {
+  right: 14px;
+  top: 32px;
+  padding: 8px 10px;
+}
+
+.credit-card-frontside .exp-date-div .month-buttons-div .month-up {
+  margin-bottom: 3px;
+}
+
+.credit-card-frontside .exp-date-div .year-buttons-div {
+  right: 14px;
+  top: 6px;
+  padding: 8px 10px;
+}
+
+.credit-card-frontside .exp-date-div .year-buttons-div .year-up {
+  margin-bottom: 3px;
+}
+
+.credit-card-frontside input[type="text"] {
+  width: 320px;
+  border: 1px solid #A4A4A3;
+  height: 35px;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+/* credit-card-frontside-end */
+
+.credit-card-backsite {
+  width: 360px;
+  background: #939393;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 15px 0;
+  top: 30px;
+  left: 110px;
+  align-items: flex-end;
+  font-size: 12px;
+  line-height: 14px;
+  color: #161615;
+  border-radius: 5px;
+  z-index: 10;
+  position: absolute;
+}
+
+.credit-card-backsite label {
+  margin-right: 32px;
+}
+
+.credit-card-div label {
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 500;
+  
+}
+
+.credit-card-backsite input[type="tel"] {
+  width: 75px;
+  height: 35px;
+  margin: 5px 20px 0 0;
+  padding-left: 20px;
+  border: 1px solid #A4A4A3;
+}
+
+.credit-card-backside-line {
+  width: 100%;
+  height: 45px;
+  background: #000000;
+  margin: 0 0 15px 0;
+}
+
+.credit-card-backsite-text {
+  font-size: 10px;
+  line-height: 12px;
+  width: 55px;
+  margin: 6px 30px 0 0;
+}
+
+.book-button {
+  width: 220px;
+  height: 45px;
+  text-align: center;
+  background: #710707;
+  opacity: 0.9;
+  top: 267px;
+  right: -1px;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+  overflow: hidden;
+  position: absolute;
+}
+
+
+#option-ticket-type {
+  font-size: 100%;
+  font-size: 18px;
+}
+
+#input-date, #time-date {
+  font-size: 18px;
+  padding: 0 8px 0 45px;
+  line-height: 26px;
+}
+
+#ggg {
+  padding-top: 12px;
+  
+}
+
+
+/* form-validation-error-divs */
+
+.name-error {
+  width: 203px;
+  height: 40px;
+  border: 1px solid red;
+  position: absolute;
+  top: 355px;
+  left: 15px;
+  font-size: 15px;
+  color: #f02020;
+  text-align: center;
+  padding-top: 10px;
+  display: none;
+}
+
+.email-error {
+  width: 203px;
+  height: 40px;
+  border: 1px solid red;
+  position: absolute;
+  top: 420px;
+  left: 15px;
+  font-size: 15px;
+  color: #f02020;
+  text-align: center;
+  padding-top: 5px;
+  display: none;
+}
+
+.phone-error {
+  width: 203px;
+  height: 40px;
+  border: 1px solid red;
+  position: absolute;
+  top: 485px;
+  left: 15px;
+  font-size: 15px;
+  color: #f02020;
+  text-align: center;
+  padding-top: 10px;
+  display: none;
+}
+
+
+
+
+
+
+
+

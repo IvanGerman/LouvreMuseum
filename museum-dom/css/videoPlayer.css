@@ -1,0 +1,170 @@
+.player-wrapper {
+  width: 100%;
+  max-width: 1440px;
+  height: 735px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+
+.video-player {
+  width: 100%;
+}
+
+.button {
+  width: 23px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.player-controls {
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  max-width: 1440px;
+  height: 85px;
+  transition: all .3s;
+  background: #000000;
+}
+
+
+.play-progress {
+  width: 929px;
+  margin-right: 50px;
+  position: relative;
+  display: flex;
+  height: 8px;
+  background: #c4c4c4;
+  cursor: pointer;
+}
+
+.play-progress-filled {
+  width: 50%;
+  background: #710707;
+  flex: 0;
+  flex-basis: 50%;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------- */
+
+
+.toggle {
+  margin-left: 30px;
+  margin-right: 50px;
+}
+
+
+
+.volumeIcon {
+  width: 38px;
+  height: 30px;
+  
+  display: flex;
+  flex-direction: row;
+}
+
+.volumen-slider {
+  width: 155px;
+  height: 8px;
+  background: #c4c4c4;
+}
+
+.fullScreenIcon {
+  width: 36px;
+  height: 36px;
+  margin-left: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+
+.fullScreenIcon img {
+  margin-left: 4px;
+}
+
+
+
+/* ------------------------------------------------------------------------------------------------------- */
+.player-wrapper:fullscreen {
+  max-width: none;
+  width: 100%;
+}
+
+.player-wrapper:-webkit-full-screen {
+  max-width: none;
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------------- */
+
+/* slider-line */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #c4c4c4;
+}
+
+/* slider-pipka */
+input[type=range]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #710707;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  margin: 0 5px;
+}
+
+
+
+
+.video-controls-volume-button {
+  width: 38px;
+  height: 31px;
+  margin-right: 50px;
+  background-image: url("./../assets/svg/video-player-svg/VolumeONicon.svg");
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+#volume-toggle-btn {
+  font-family: inherit;
+    font-size: 100%;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+
+
+.video-play-button{
+  position: absolute;
+  z-index: 1;
+  margin-top: 215px;
+  left: 42.5%;
+  cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.video-play-button-svg {
+  width: 220px;
+  height: 220px;
+}
